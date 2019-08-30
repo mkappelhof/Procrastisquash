@@ -1,7 +1,7 @@
-import '../style/style.scss'
+import './style.scss'
 
 showdown    = require('showdown')
-srcRules    = require('../rules/rules.md')
+srcRules    = require('./rules.md')
 converter   = new showdown.Converter()
 rules       = converter.makeHtml(srcRules)
 
