@@ -1,0 +1,20 @@
+{
+  "name": "Procrastisquash",
+  "version": "1.0.0",
+  "description": "The most amazing game for in-between office hours",
+  "main": "index.js",
+  "repository": "git@github.com:mkappelhof/Procrastisquash.git",
+  "author": "Maurice Kappelhof <maurice@sysunite.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack/dev.config.coffee",
+    "build": "NODE_ENV=production webpack --config webpack/prod.config.coffee"
+  },
+  "dependencies": {
+    "coffeescript": "^2.4.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
