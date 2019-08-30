@@ -1,4 +1,5 @@
-HtmlWebpackPlugin = require('html-webpack-plugin')
+HtmlWebpackPlugin     = require('html-webpack-plugin')
+MiniCssExtractPlugin  = require('mini-css-extract-plugin')
 
 module.exports =
   entry: __dirname + '/../src/app/index.coffee'
@@ -14,7 +15,7 @@ module.exports =
         use: ['coffee-loader']
       },{
         test: /\.(sass|scss)$/
-        use: ['css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },{
         test: /\.md$/,
         use: ['html-loader', 'markdown-loader']
@@ -25,6 +26,11 @@ module.exports =
     new HtmlWebpackPlugin({
       template: __dirname + '/../src/public/index.html'
       inject: 'body'
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+      chunkFilename: '[id].css'
+      ignoreOrder: false
     })
   ]
 
