@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:700);
+
+h1,h2,h3{
+  font-family: "Roboto Condensed", sans-serif
+}
+
+h1{font-size: 38px}
+h2{font-size: 30px}
+h3{font-size: 26px}
+
+p,li{
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  line-height: 30px
+}
+header,section{
+  width: 100%;
+  margin: 10px;
+
+  @media only screen and (min-width:768px){
+    width: 60%;
+    margin: 0 auto;
+  }
+}
