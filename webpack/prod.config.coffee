@@ -2,12 +2,10 @@ merge = require('webpack-merge')
 baseConfig = require('./base.config')
 
 module.exports = merge(baseConfig,
+  mode: 'production'
+
   output:
-    path: __dirname + '/dist'
+    path: __dirname + '/../dist/'
     filename: 'bundle.js'
     publicPath: '/'
-
-  devServer:
-    contentBase: '../src'
-    port: 1337
 )
