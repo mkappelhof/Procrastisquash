@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/dev.config.coffee",
-    "build": "NODE_ENV=production webpack --config webpack/prod.config.coffee"
+    "build": "webpack --config webpack/prod.config.coffee"
   },
   "dependencies": {
     "coffee-loader": "^0.9.0",
